@@ -1,0 +1,76 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "JPFMoveDiagonallyIfAtMostOneObstacle",
+"language": "GDScript",
+"path": "res://src/JumpPointSearch/JPFMoveDiagonallyIfAtMostOneObstacles.gd"
+}, {
+"base": "Node",
+"class": "JPFMoveDiagonallyIfNoObstacles",
+"language": "GDScript",
+"path": "res://src/JumpPointSearch/JPFMoveDiagonallyIfNoObstacles.gd"
+}, {
+"base": "Node",
+"class": "JPFNeverMoveDiagonally",
+"language": "GDScript",
+"path": "res://src/JumpPointSearch/JPFNeverMoveDiagonally.gd"
+}, {
+"base": "Node",
+"class": "JPS",
+"language": "GDScript",
+"path": "res://src/JumpPointSearch/JPS.gd"
+}, {
+"base": "Node",
+"class": "JumpNode",
+"language": "GDScript",
+"path": "res://src/JumpPointSearch/JumpNode.gd"
+}, {
+"base": "Node",
+"class": "TileNode",
+"language": "GDScript",
+"path": "res://src/AStar/TileNode.gd"
+}, {
+"base": "Node",
+"class": "Utility",
+"language": "GDScript",
+"path": "res://src/JumpPointSearch/Utility.gd"
+} ]
+_global_script_class_icons={
+"JPFMoveDiagonallyIfAtMostOneObstacle": "",
+"JPFMoveDiagonallyIfNoObstacles": "",
+"JPFNeverMoveDiagonally": "",
+"JPS": "",
+"JumpNode": "",
+"TileNode": "",
+"Utility": ""
+}
+
+[application]
+
+config/name="Algorithm"
+config/icon="res://icon.png"
+
+[autoload]
+
+Autoload="*res://src/Autoload/Autoload.gd"
+
+[display]
+
+window/size/width=840
+window/size/height=480
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
