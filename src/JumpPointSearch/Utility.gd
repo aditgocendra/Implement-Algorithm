@@ -10,6 +10,7 @@ func backtrace(current_node):
 		current = current.parent
 		
 		path.push_front(current.tile_pos)
+	print(path)
 	return path
 
 
@@ -63,7 +64,6 @@ func expandPath(path : Array):
 	for i in range(length - 1):
 		coord1 = path[i]
 		coord2 = path[i + 1]
-		print(coord1)
 		interpolated = interpolate(coord1[0], coord1[1], coord2[0], coord2[1])
 		interpolatedLen = interpolated.size()
 		for j in range(interpolatedLen - 1):
@@ -79,3 +79,11 @@ func octile(dx, dy):
 	if dx < dy:
 		return F * dx + dy
 	else: return F * dy + dx
+
+
+func manhattan(dx, dy):
+	return dx + dy
+
+func diagonal_distance(dx, dy):
+	var H = 1 * max(dx, dy) + (sqrt(2) - 2 * 1) * min(dx, dy)
+	return H
